@@ -35,16 +35,11 @@ def attendance():
         Present or Absent
     """
     check = random.randint(0,2)
-    ans = ''
-    if check==0:
-        ans = 'Absent'
-    else:
-        ans='Present'
-
-    return ans
+    print(check)
+    return check
 
 
-def dailyWage():
+def dailyWage(wage_per_hour, work_hour):
     """Description: 
         Function to calculate daily wage of Employee
     Parameters:
@@ -52,16 +47,26 @@ def dailyWage():
     Returns:
         Daily Wage
     """
-    wage_per_hour = 20
-    work_hour = 8
-    return 20*8
+    return wage_per_hour*work_hour
+
 
 
 
 def main():
     welcome()
-    print(attendance())
-    print(f"Daily wage of Employee is {dailyWage()}")
+    wage_per_hour = 20
+    fulltime_work = 8
+    part_time_work = 4
+    if(attendance==0):
+        print("Absent")
+    elif attendance==1:
+        print("Present")
+        print(f"Daily wage of Full Time Employee is {dailyWage(wage_per_hour,fulltime_work)}")
+    else:
+        print("Present")
+        print(f"Daily wage of Part Time Employee is {dailyWage(wage_per_hour,part_time_work)}")
+
+    
 
 if __name__=="__main__":
     main()
