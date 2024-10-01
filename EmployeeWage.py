@@ -9,6 +9,9 @@
 
 '''
 
+import random
+
+
 def welcome():
     """
     Description: 
@@ -21,8 +24,31 @@ def welcome():
 
     print("Welcome to Employee Wage Computation")
 
+
+def attendance():
+    """
+    Description: 
+        Function to check employee is present or absent
+    Parameters:
+        None
+    Returns:
+        Present or Absent
+    """
+    check = random.randint(0,2)
+    ans = ''
+    if check==0:
+        ans = 'Absent'
+    else:
+        ans='Present'
+
+    return ans
+
+
+
+
 def main():
     welcome()
+    print(attendance())
 
 if __name__=="__main__":
     main()
