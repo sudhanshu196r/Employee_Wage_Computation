@@ -41,7 +41,8 @@ def dailyWage(wage_per_hour, work_hour):
     """Description: 
         Function to calculate daily wage of Employee
     Parameters:
-        None
+        wage_per_hour: rate of wage per hour
+        work_hour : total hour of work done
     Returns:
         Daily Wage
     """
